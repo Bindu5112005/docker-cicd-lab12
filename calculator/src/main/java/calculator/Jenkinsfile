@@ -37,7 +37,7 @@ pipeline {
         stage('Run Container') {
             steps {
                 bat 'docker rm -f app || exit 0'
-                bat 'docker run -d -p 9090:8080 --name app add-two-number-app'
+                bat 'docker run -d --name app add-two-number-app'
             }
         }
     }
