@@ -1,9 +1,13 @@
 package calculator;
 
-public class Addition {
-    public static void main(String[] args) {
-        int a = 5;
-        int b = 3;
-        System.out.println("Sum = " + (a + b));
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class AdditionTest {
+
+    @Test
+    public void testAdd() {
+        Addition obj = new Addition();
+        assertEquals(8, obj.add(5, 3));
     }
 }
